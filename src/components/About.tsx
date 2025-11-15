@@ -1,3 +1,5 @@
+import teamPhoto from "@/assets/team-photo.png";
+
 export const About = () => {
   return (
     <section className="py-20 sm:py-32 relative">
@@ -7,18 +9,15 @@ export const About = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Left: Image Placeholder */}
-            <div className="relative p-6 sm:p-10 lg:p-12 min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] flex items-center justify-center">
-              <div className="relative z-10 text-center space-y-4">
-                <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-full bg-gradient-primary flex items-center justify-center shadow-strong">
-                  <div className="text-6xl sm:text-7xl">🖼️</div>
-                </div>
-                <h3 className="text-2xl font-bold text-primary">
-                  Image Placeholder
-                </h3>
-                <p className="text-muted-foreground text-sm sm:text-base max-w-sm mx-auto">
-                  Space reserved for impactful imagery
-                </p>
+            {/* Left: Team Photo */}
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-glow opacity-30 blur-2xl" />
+              <div className="relative z-10 rounded-2xl overflow-hidden shadow-strong border border-border/50">
+                <img 
+                  src={teamPhoto} 
+                  alt="CodeSpace Club Team" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
