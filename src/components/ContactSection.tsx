@@ -82,7 +82,7 @@ export const ContactSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
             {/* Left: Contact Form */}
-            <div className="relative p-6 sm:p-10 lg:p-12">
+            <div className="relative p-6 sm:p-10 lg:p-12 order-2 lg:order-1">
               {/* Content */}
               <div className="relative z-10 space-y-6">
                 <div className="space-y-3">
@@ -176,8 +176,8 @@ export const ContactSection = () => {
             </div>
 
             {/* Right: 3D Spline Component */}
-            <div className="relative overflow-hidden">
-              <div className="absolute inset-0 scale-125 -right-1/4">
+            <div className="relative overflow-hidden h-[400px] lg:h-auto order-1 lg:order-2">
+              <div className="absolute inset-0 scale-110 -right-1/2">
                 <SplineComponent className="w-full h-full" />
               </div>
             </div>
