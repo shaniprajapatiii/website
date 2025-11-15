@@ -1,22 +1,68 @@
 export const About = () => {
   return (
-    <section className="py-20 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="backdrop-blur-glass bg-[hsl(var(--glass-bg))] rounded-2xl border border-[hsl(var(--glass-border))] p-8 sm:p-12 shadow-xl animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-              CodeSpace
-            </h2>
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                At CodeSpace, we are more than just a tech club; we are a vibrant community of tech enthusiasts where innovation meets passion. Our mission is to create a space where students can learn, grow, and excel together.
-              </p>
-              <p>
-                Whether it's mastering a new programming language, competing in hackathons, or collaborating on groundbreaking projects, CodeSpace is the perfect place to turn your passion into reality!
-              </p>
-              <p>
-                Join us and become part of a community where creativity, collaboration, and technology come together to shape the future.
-              </p>
+    <section className="py-20 sm:py-32 relative">
+      {/* SVG Filter for glassmorphism */}
+      <svg style={{ display: 'none' }}>
+        <filter id="aboutDisplacementFilter">
+          <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turbulence" />
+          <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="200" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </svg>
+
+      {/* Background Glow Effects */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-glow opacity-20 blur-3xl" />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-5xl mx-auto">
+          {/* Main Card */}
+          <div 
+            className="relative overflow-hidden rounded-[28px] p-8 sm:p-12 lg:p-16 group hover:scale-[1.02] transition-all duration-500"
+            style={{
+              filter: 'drop-shadow(-8px -10px 46px rgba(0, 0, 0, 0.37))',
+              backdropFilter: 'brightness(1.1) blur(9px) url(#aboutDisplacementFilter)',
+              WebkitBackdropFilter: 'brightness(1.1) blur(9px)',
+              background: 'hsl(var(--glass-bg))',
+            }}
+          >
+            {/* Glassmorphic border effect */}
+            <div 
+              className="absolute inset-0 rounded-[28px] pointer-events-none"
+              style={{
+                boxShadow: 'inset 6px 6px 0px -6px rgba(255, 255, 255, 0.7), inset 0 0 8px 1px rgba(255, 255, 255, 0.7)',
+              }}
+            />
+
+            {/* Content */}
+            <div className="relative z-10 space-y-8">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-primary tracking-tight">
+                CodeSpace
+              </h2>
+              
+              <div className="space-y-6 text-foreground/90 text-base sm:text-lg leading-relaxed">
+                <p className="font-semibold">
+                  At CodeSpace, we are more than just a tech club; we are a{" "}
+                  <span className="text-primary font-bold">vibrant community</span> of tech enthusiasts 
+                  where innovation meets passion.
+                </p>
+                
+                <p>
+                  Our mission is to create a space where students can learn, grow, and excel together. 
+                  Whether it's mastering a new programming language, competing in hackathons, or collaborating 
+                  on groundbreaking projects, CodeSpace is the perfect place to turn your passion into reality!
+                </p>
+                
+                <p className="font-semibold text-primary/90">
+                  Join us and become part of a community where creativity, collaboration, and technology 
+                  come together to shape the future.
+                </p>
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="flex gap-4 pt-4">
+                <div className="h-1 w-16 bg-gradient-primary rounded-full" />
+                <div className="h-1 w-12 bg-gradient-primary rounded-full opacity-60" />
+                <div className="h-1 w-8 bg-gradient-primary rounded-full opacity-40" />
+              </div>
             </div>
           </div>
         </div>
