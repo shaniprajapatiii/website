@@ -323,12 +323,5 @@ If you have questions or need help:
 - **Twitter**: [@codespaceclub](https://x.com/codespaceclub)
 - **GitHub**: [codespace-club](https://github.com/codespace-club)
 
-## 📄 License
 
-This project is open source and available for educational purposes.
 
----
-
-**Built with ❤️ by CodeSpace Club**
-
-For more information about Lovable, visit [docs.lovable.dev](https://docs.lovable.dev/)
