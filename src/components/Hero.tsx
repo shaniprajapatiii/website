@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/codespace-logo.png";
 
 export const Hero = () => {
   return (
@@ -14,14 +15,11 @@ export const Hero = () => {
           <div className="flex justify-center lg:hidden animate-fade-in order-1">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-glow opacity-50 blur-2xl" />
-              <div className="relative backdrop-blur-glass bg-[hsl(var(--glass-bg))] p-8 rounded-full border-2 border-[hsl(var(--glass-border))] shadow-strong">
-                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-gradient-primary flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-3xl sm:text-4xl font-bold text-white">CS</div>
-                    <div className="text-xs sm:text-sm font-semibold text-white/90 mt-1">CLUB</div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src={logo} 
+                alt="CodeSpace Club Logo" 
+                className="w-40 h-40 sm:w-48 sm:h-48 object-contain relative z-10"
+              />
             </div>
           </div>
 
@@ -57,14 +55,11 @@ export const Hero = () => {
           <div className="hidden lg:flex justify-center lg:justify-end animate-fade-in order-3 lg:order-2" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-glow opacity-50 blur-2xl" />
-              <div className="relative backdrop-blur-glass bg-[hsl(var(--glass-bg))] p-12 rounded-full border-2 border-[hsl(var(--glass-border))] shadow-strong">
-                <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-gradient-primary flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl sm:text-5xl font-bold text-white">CS</div>
-                    <div className="text-sm sm:text-base font-semibold text-white/90 mt-2">CLUB</div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src={logo} 
+                alt="CodeSpace Club Logo" 
+                className="w-48 h-48 sm:w-64 sm:h-64 object-contain relative z-10"
+              />
             </div>
           </div>
         </div>
