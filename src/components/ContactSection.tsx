@@ -81,7 +81,7 @@ export const ContactSection = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left: Contact Form */}
-            <div className="relative p-6 sm:p-10 lg:p-12 autoblur">
+            <div className="relative p-6 sm:p-10 lg:p-12">
               {/* Content */}
               <div className="relative z-10 space-y-6">
                 <div className="space-y-3">
@@ -175,7 +175,7 @@ export const ContactSection = () => {
             </div>
 
             {/* Right: 3D Spline Placeholder */}
-            <div className="relative p-6 sm:p-10 lg:p-12 min-h-[400px] lg:min-h-[600px] flex items-center justify-center autoblur">
+            <div className="relative p-6 sm:p-10 lg:p-12 min-h-[400px] lg:min-h-[600px] flex items-center justify-center">
               {/* Placeholder Content */}
               <div className="relative z-10 text-center space-y-4">
                 <div className="w-32 h-32 mx-auto rounded-full bg-gradient-primary flex items-center justify-center shadow-strong">
