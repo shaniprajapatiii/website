@@ -13,7 +13,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import SplineComponent from "@/components/Spline";
+import LazySpline from "@/components/LazySpline";
 
 const contactSchema = z.object({
   name: z
@@ -178,7 +178,7 @@ export const ContactSection = () => {
             {/* Right: 3D Spline Component */}
             <div className="relative overflow-hidden h-[400px] lg:h-auto order-1 lg:order-2">
               <div className="absolute inset-0 scale-110 -right-1/2">
-                <SplineComponent className="w-full h-full" />
+                <LazySpline scene="https://prod.spline.design/SG1r5oLOEtmjaRwC/scene.splinecode" className="w-full h-full" />
               </div>
             </div>
           </div>
