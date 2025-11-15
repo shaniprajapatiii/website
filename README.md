@@ -314,35 +314,6 @@ If you have questions or need help:
 - Contact us at `Codespace.it@glbitm.ac.in`
 - Join our community channels
 
-## 🚀 Deployment
-
-### Deploy with Lovable
-
-Simply open [Lovable](https://lovable.dev/projects/24d4b3ca-4723-45e7-9f73-8fbef171b87d) and click on **Share → Publish**.
-
-### Custom Domain
-
-To connect a custom domain:
-1. Navigate to Project > Settings > Domains
-2. Click Connect Domain
-3. Follow the instructions
-
-[Read more about custom domains](https://docs.lovable.dev/features/custom-domain#custom-domain)
-
-### Self-Hosting
-
-Build the project for production:
-
-```bash
-npm run build
-```
-
-The `dist/` folder can be deployed to any static hosting service:
-- Vercel
-- Netlify
-- GitHub Pages
-- AWS S3 + CloudFront
-- Any web server (nginx, Apache)
 
 ## 📧 Contact
 
