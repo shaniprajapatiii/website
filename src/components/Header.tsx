@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "@/components/NavLink";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "HOME", path: "/" },
@@ -10,6 +11,7 @@ const navItems = [
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
@@ -42,7 +44,8 @@ export const Header = () => {
       </svg>
 
       <header
-        className={`fixed z-50 transition-all duration-500 ease-out top-4 left-1/2 -translate-x-1/2
+        className={`fixed z-50 transition-all duration-500 ease-out
+          ${isMobileMenuOpen ? "top-4 left-4 right-4" : "top-4 md:left-1/2 md:-translate-x-1/2 left-4 right-4 md:right-auto md:w-auto"}
           ${isScrolled || isHovered ? "scale-100" : "scale-95"}
         `}
         onMouseEnter={() => setIsHovered(true)}
@@ -54,7 +57,7 @@ export const Header = () => {
             className={`
               relative overflow-hidden
               transition-all duration-500 ease-out
-              rounded-full px-6 py-3 md:px-8
+              ${isMobileMenuOpen ? "rounded-3xl px-6 py-6 md:px-8" : "rounded-full px-6 py-3 md:px-8"}
               border border-white/50
               backdrop-blur-[9px] [-webkit-backdrop-filter:blur(9px)]
               bg-background/10
@@ -70,14 +73,14 @@ export const Header = () => {
               WebkitBackdropFilter: 'brightness(1.1) blur(9px)',
             }}
           >
-            {/* Navigation - Same on Mobile and Desktop */}
-            <div className="flex items-center space-x-1 relative z-10">
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-1 relative z-10">
               {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   end
-                  className="px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-muted-foreground 
+                  className="px-6 py-2.5 rounded-full text-sm font-bold text-muted-foreground 
                     transition-all duration-300 ease-out
                     hover:text-foreground hover:bg-white/10 hover:scale-105"
                   activeClassName="text-primary bg-white/15 shadow-glow scale-105"
@@ -86,6 +89,37 @@ export const Header = () => {
                 </NavLink>
               ))}
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-3 rounded-full text-foreground 
+                hover:bg-white/10 transition-all duration-300 hover:scale-110 relative z-10"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+              <div className="md:hidden mt-6 animate-fade-in relative z-10">
+                <div className="flex flex-col space-y-3">
+                  {navItems.map((item) => (
+                    <NavLink
+                      key={item.path}
+                      to={item.path}
+                      end
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="px-6 py-3.5 rounded-full text-base font-bold text-muted-foreground 
+                        transition-all duration-300 hover:text-foreground hover:bg-white/10 hover:scale-105"
+                      activeClassName="text-primary bg-white/15 scale-105"
+                    >
+                      {item.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </nav>
       </header>
