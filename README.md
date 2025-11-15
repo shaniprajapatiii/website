@@ -2,9 +2,7 @@
 
 Welcome to the CodeSpace Club official website! This is a modern, responsive web application built to showcase our tech community, events, blogs, and team.
 
-## 🚀 Live Demo
 
-**URL**: https://lovable.dev/projects/24d4b3ca-4723-45e7-9f73-8fbef171b87d
 
 ## 📋 Table of Contents
 
