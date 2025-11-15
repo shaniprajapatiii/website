@@ -47,10 +47,10 @@ export const Footer = () => {
       {/* Giant CODESPACE Text Section */}
       <div 
         ref={sectionRef}
-        className="min-h-[35vh] sm:min-h-[45vh] lg:min-h-[55vh] flex items-center justify-start bg-background px-4 sm:px-8 lg:px-16 py-16 sm:py-20 lg:py-24 overflow-hidden"
+        className="min-h-[40vh] sm:min-h-[50vh] lg:min-h-[55vh] flex items-center justify-start bg-background px-4 sm:px-8 lg:px-16 py-20 sm:py-24 lg:py-28 overflow-hidden"
       >
         <h2 
-          className="text-[16vw] sm:text-[14vw] lg:text-[12vw] xl:text-[10vw] font-black italic text-primary leading-none tracking-tighter transition-transform duration-100 ease-out"
+          className="text-[18vw] sm:text-[14vw] lg:text-[12vw] xl:text-[10vw] font-black italic text-primary leading-none tracking-tighter transition-transform duration-100 ease-out"
           style={{ transform: `translateX(${translateX}%)` }}
         >
           CODESPACE
@@ -59,7 +59,7 @@ export const Footer = () => {
 
       {/* Orange Content Section */}
       <div className="bg-primary">
-        <div className="container mx-auto px-4 sm:px-8 lg:px-20 py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-8 lg:px-20 py-16 sm:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
             {/* Left: Club Description */}
             <div className="space-y-3 sm:space-y-4">

@@ -9,14 +9,29 @@ export const Hero = () => {
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-glow opacity-20 blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
 
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-6">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Mobile: Logo First */}
+          <div className="flex justify-center lg:hidden animate-fade-in order-1">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-glow opacity-50 blur-2xl" />
+              <div className="relative backdrop-blur-glass bg-[hsl(var(--glass-bg))] p-8 rounded-full border-2 border-[hsl(var(--glass-border))] shadow-strong">
+                <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-gradient-primary flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-3xl sm:text-4xl font-bold text-white">CS</div>
+                    <div className="text-xs sm:text-sm font-semibold text-white/90 mt-1">CLUB</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Text Content */}
+          <div className="space-y-6 sm:space-y-8 animate-fade-in order-2 lg:order-1">
+            <div className="space-y-4 sm:space-y-6">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-primary tracking-tight">
                 CODESPACE
               </h1>
-              <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground max-w-lg font-semibold">
+              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground max-w-lg font-semibold">
                 A hub for tech enthusiasts to explore, innovate, and create the future together!
               </p>
             </div>
@@ -38,8 +53,8 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Logo */}
-          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          {/* Desktop: Logo on Right */}
+          <div className="hidden lg:flex justify-center lg:justify-end animate-fade-in order-3 lg:order-2" style={{ animationDelay: "0.2s" }}>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-glow opacity-50 blur-2xl" />
               <div className="relative backdrop-blur-glass bg-[hsl(var(--glass-bg))] p-12 rounded-full border-2 border-[hsl(var(--glass-border))] shadow-strong">
