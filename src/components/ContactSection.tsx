@@ -176,8 +176,10 @@ export const ContactSection = () => {
             </div>
 
             {/* Right: 3D Spline Component */}
-            <div className="relative">
-              <SplineComponent className="w-full h-full" />
+            <div className="relative overflow-hidden">
+              <div className="absolute inset-0 scale-125 -right-1/4">
+                <SplineComponent className="w-full h-full" />
+              </div>
             </div>
           </div>
         </div>
