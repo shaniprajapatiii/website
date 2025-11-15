@@ -42,7 +42,7 @@ export const Header = () => {
       </svg>
 
       <header
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out w-[95%] sm:w-auto
           ${isScrolled || isHovered ? "scale-100" : "scale-95"}
         `}
         onMouseEnter={() => setIsHovered(true)}
