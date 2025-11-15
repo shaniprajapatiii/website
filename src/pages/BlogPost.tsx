@@ -1,5 +1,3 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { Calendar, User, ArrowLeft, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useParams, Navigate } from "react-router-dom";
@@ -15,10 +13,9 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      <Header />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-12 sm:pt-40 sm:pb-16 relative">
+      <section className="pt-12 pb-12 sm:pt-16 sm:pb-16 relative">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-glow opacity-20 blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-glow opacity-20 blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
         
@@ -108,8 +105,6 @@ const BlogPost = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 };

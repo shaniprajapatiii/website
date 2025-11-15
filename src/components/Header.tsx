@@ -6,6 +6,7 @@ const navItems = [
   { name: "ABOUT US", path: "/about" },
   { name: "EVENTS", path: "/events" },
   { name: "TEAM", path: "/team" },
+  { name: "BLOGS", path: "/blogs" },
 ];
 
 export const Header = () => {
