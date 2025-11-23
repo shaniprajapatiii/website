@@ -12,6 +12,9 @@ import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import LoginPage from "./pages/LoginPage";
+// Import TeamDetails and MemberDetails pages
+import MemberDetails from "./pages/MemberDetails";
+import TeamDetails from "./pages/TeamDetails";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +31,8 @@ const App = () => (
           <Route path="/events" element={<Events />} />
           <Route path="/events/:id" element={<EventDetails />} />
           <Route path="/team" element={<Team />} />
+          <Route path="/team/:teamId" element={<TeamDetails />} />    {/* TeamDetails route */}
+          <Route path="/member/:id" element={<MemberDetails />} />    {/* MemberDetails route */}
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
