@@ -11,6 +11,7 @@ import Team from "./pages/Team";
 import Blogs from "./pages/Blogs";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import LoginPage from "./pages/LoginPage";
 // Import TeamDetails and MemberDetails pages
 import MemberDetails from "./pages/MemberDetails";
 import TeamDetails from "./pages/TeamDetails";
@@ -24,6 +25,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />

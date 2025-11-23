@@ -1,8 +1,44 @@
-import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/codespace-logo.png";
+import { useAuth } from "@/hooks/AuthContext";
+import { supabase } from "@/lib/supabaseClient";
+import { Link, useNavigate } from "react-router-dom";
 
-export const Hero = () => {
+interface HeroProps {
+  onJoinUsClick: () => void;
+}
+
+export const Hero = ({ onJoinUsClick }: HeroProps) => {
+  const { user, loading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    navigate('/');
+  };
+
+  const renderAuthButton = () => {
+    if (loading) {
+      return <Button size="lg" variant="outline" disabled>Loading...</Button>;
+    }
+
+    if (user) {
+      return (
+        <Button size="lg" variant="outline" onClick={handleLogout}>
+          Logout
+        </Button>
+      );
+    }
+
+    return (
+      <Link to="/login">
+        <Button size="lg" variant="outline">
+          Editor Login
+        </Button>
+      </Link>
+    );
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-10">
 
@@ -31,17 +67,12 @@ export const Hero = () => {
             <div className="flex flex-wrap gap-4 md:gap-6">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground transition-all duration-300 group"
+                className="bg-primary text-primary-foreground transition-all duration-300"
+                onClick={onJoinUsClick}
               >
                 Join Us
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-              >
-                Learn More
-              </Button>
+              {renderAuthButton()}
             </div>
           </div>
 
