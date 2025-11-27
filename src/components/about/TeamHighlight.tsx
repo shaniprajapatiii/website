@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Linkedin, Twitter, Github } from "lucide-react";
+import { Mail, Linkedin, Twitter} from "lucide-react";
 
 interface PersonSocials {
    email?: string;
@@ -21,7 +21,7 @@ const people: Person[] = [
       name: "Dr. Prem Chand Vashist",
       title: "Head of Department - Computer Science and Information Technology",
       bio: "A visionary educator with 15+ years of experience shaping future technologists.",
-      image: "https://www.onthisday.com/images/people/adolf-hitler.jpg?w=360",
+      image: "/images/team/team-photo.png",
       socials: {
          email: "hod.it@glbitm.ac.in",
          linkedin: "https://linkedin.com",
@@ -32,7 +32,7 @@ const people: Person[] = [
       name: "Ms. Kavya Goswami",
       title: "Club Coordinator",
       bio: "Ms. Kavya Goswami, a professor at GLBITM, provides invaluable support and guidance to CodeSpace Club. With her encouragement, the club has developed into a hub for innovation, learning, and student-led initiatives.",
-      image: "https://www.rollingstone.com/wp-content/uploads/2025/08/GettyImages-2219551859-1.jpg?w=1581&h=1054&crop=1",
+      image: "/images/team/team-photo.png",
       socials: {
          email: "kavya.goswami@glbitm.ac.in",
          linkedin: "https://linkedin.com",
